@@ -8,7 +8,7 @@ This is a temporary script file.
 import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
-import os
+
 
 from sklearn.decomposition import PCA
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
@@ -91,7 +91,7 @@ v2 = tf.reduce_sum(tf.square(tf.multiply(xy,(1-Y_double)) - mu2*(1-Y_double)),0)
 
 '''loss function'''
 normal_mu1 = tf.constant([5,5], dtype=tf.float32)
-normal_mu2 = tf.constant([2,2], dtype=tf.float32)
+normal_mu2 = tf.constant([0,0], dtype=tf.float32)
 
 loss = (tf.reduce_sum(v1)+ tf.reduce_sum(tf.square(mu1 - normal_mu1))- tf.log(v1[0]*v1[1]))/2 + (tf.reduce_sum(v2)+ tf.reduce_sum(tf.square(mu2 - normal_mu2)) - tf.log(v2[0]*v2[1]))/2 -2
 optimizer = tf.train.AdamOptimizer(learning_rate = 1e-2)
@@ -107,7 +107,7 @@ with tf.Session() as sess:
         if step % 50 == 0:
             xylist.append(sess.run(xy, feed_dict = {X: X_data, Y: Y_data}))
             print(step, sess.run(loss, feed_dict = {X: X_data, Y: Y_data}))
-            save_path = saver.save(sess, './tmp_20181018/epoch' + str(step)+ 'model.ckpt')
+            save_path = saver.save(sess, './tmp_20181022/epoch' + str(step)+ 'model.ckpt')
     print(sess.run([mu1, mu2, v1, v2],feed_dict = {X: X_data, Y: Y_data}))
 xycoord = np.array(xylist).reshape(42000,2)
 
@@ -127,41 +127,25 @@ PCA = PCA(n_components=2)
 X_PCA = PCA.fit(X_data).transform(X_data)
 
 LDA = LinearDiscriminantAnalysis(n_components = 2)
-QDA = QuadraticDiscriminantAnalysis()
+
+
+pure_LDA = LDA.fit_transform(X_data,Y_data)
+LDA.score(X_data, Y_data)
+''' 0.51'''
+
+X_PCA_LDA = LDA.fit_transform(X_PCA, Y_data)
+LDA.score(X_PCA, Y_data)
+'''0.507'''
+
 
 twodim_LDA = LDA.fit_transform(twodim, Y_data)
-X_PCA_LDA = LDA.fit_transform(X_data, Y_data)
-
-LDA.score(X_data, Y_data)
-'''Out[72]: 0.912'''
-
 LDA.score(twodim, Y_data)
-'''Out[76]: 0.51'''
+'''0.912'''
 
+QDA = QuadraticDiscriminantAnalysis()
 X_QDA = QDA.fit(X_data, Y_data)
-
 QDA.score(X_data, Y_data)
-'''Out[85]: 0.8045'''
-
-
-'''fig, ax = plt.subplots()
-ax.set(xlim = [-5, 10], ylim = [-5,10])
-
-scat = ax.scatter([],[])
-
-
-def animate(i):
-    x_plot = xycoord[2000*(i-1):2000*i,0]
-    y_plot = xycoord[2000*(i-1):2000*i,1]
-    
-    scat.set_offsets([x_plot,y_plot])
-    scat.set_edgecolors(colk + colm)
-    
-    return scat,
-
-anim = FuncAnimation(fig, animate, frames = 20, interval = 10)
-
-plt.show()'''
+'''0.8045''
 
 
 
