@@ -1,2 +1,2 @@
-# SSL
-Statistics Special Lecture
+# STIS
+-Special-Topics-in-Statistics
