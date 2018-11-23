@@ -72,8 +72,8 @@ while (x > xpaddle - 1){
   # Erase back line
   lines(c(0, 0), c(1, 29), type = "l", lwd = 8, col = "black")
   
-  # Move paddle by SPSA method
-  if ( (x <= 20) & (sign(dx) <= 0) )
+  # Move paddle by SGD method
+  if ( (x <= 20) & (sign(dx) <= 0) ) # Condition paddle observe  ball
   { # Erase back line
     lines(c(xpaddle, xpaddle), c(0.2, 29.8), type = "l", lwd = 8, col = "black")
     
