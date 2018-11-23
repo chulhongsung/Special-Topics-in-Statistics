@@ -11,6 +11,7 @@
   
   - Revise pong.R for paddle moving by SPSA ... 
 
+-------------------
 
 ### 1. SPSA method
 
