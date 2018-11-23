@@ -2,10 +2,10 @@
 
 - Special topics in Statistics
 
-  1. mid term 
+1. mid term 
     - skip
  
  
  
-  2. final term
-    - **pong** with R
+2. final term
+  - **pong** with R
