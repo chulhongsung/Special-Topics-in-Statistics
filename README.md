@@ -9,7 +9,7 @@
   - pong.R source from ['r.prevos.net Rcade'](https://github.com/pprevos/r.prevos.net/tree/master/Rcade)
   
   
-  - Revise pong.R for paddle moving by SPSA , ~FDSA~ ... 
+  - Revise pong.R for paddle moving by SGD, SPSA , ~FDSA~ ... 
 
 -------------------
 
