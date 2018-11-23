@@ -11,12 +11,12 @@
   - **'Pong'** with R
   
   
-  - pong.R source from ['r.prevos.net Rcade'](https://github.com/pprevos/r.prevos.net/tree/master/Rcade)
+  - **'pong.R'** source from ['r.prevos.net Rcade'](https://github.com/pprevos/r.prevos.net/tree/master/Rcade)
   
   
-  - Revise pong.R for paddle moving by **'SGD', 'SPSA', 'adaptive SPSA' and ~'FDSA'~** 
+  - Revise **'pong.R'** for paddle moving by **'SGD', 'SPSA', 'adaptive SPSA' and ~'FDSA'~** 
   
-  - Loss function: Distance between ball and paddle
+  - Loss function: **Distance** between ball and paddle
 
 -------------------
 #### 1. 'SGD' method
