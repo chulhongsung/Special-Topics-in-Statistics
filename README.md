@@ -1,7 +1,8 @@
 # Special topics in Statistics
 
 
-### Final term-project
+### Final term-project 'King Pong'
+<img width = "400" heigth = "350" src = https://user-images.githubusercontent.com/37679460/48955703-888ce980-ef92-11e8-9a3d-428c13ec2c1a.png>
 --------------
   - **'Pong'** with R
   
