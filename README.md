@@ -1,5 +1,5 @@
 # Special topics in Statistics
 ------------------------------
 
-### - final term
+### Final term
   - **pong** with R
