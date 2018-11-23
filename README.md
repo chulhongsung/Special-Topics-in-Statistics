@@ -1,7 +1,7 @@
 # Special topics in Statistics
 
 
-### Final term
+### Final term-project
 --------------
   - **'Pong'** with R
   
