@@ -16,7 +16,7 @@
   
   - Revise **'pong.R'** for paddle moving by **'SGD', 'SPSA', 'adaptive SPSA' and ~'FDSA'~** 
   
-  - Loss function: **Distance** between ball and paddle
+  - Loss function: Distance between ball and paddle
 
 -------------------
 #### 1. 'SGD' method
