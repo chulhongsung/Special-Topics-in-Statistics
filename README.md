@@ -9,10 +9,10 @@
   - pong.R source from ['r.prevos.net Rcade'](https://github.com/pprevos/r.prevos.net/tree/master/Rcade)
   
   
-  - Revise pong.R for paddle moving by **SGD, SPSA , ~FDSA~**... 
+  - Revise pong.R for paddle moving by **GD, SPSA , ~FDSA~**... 
 
 -------------------
-#### 1. 'SGD' method
+#### 1. 'Gradient Descent' method
 
 <img width = "400" heigth = "350" src = https://user-images.githubusercontent.com/37679460/48947558-e3174d00-ef74-11e8-9278-b31414beca21.gif>
 
