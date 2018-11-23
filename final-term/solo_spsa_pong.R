@@ -81,8 +81,8 @@ while (x > xpaddle - 1){
     lines(c(xpaddle, xpaddle), c(0.2, 29.8), type = "l", lwd = 8, col = "black")
     
     tmp_gk <- gk(x, y, xpaddle, ypaddle)
-    xpaddle <- xpaddle - 0.8*tmp_gk[1] 
-    ypaddle <- ypaddle - 0.8*tmp_gk[2]
+    xpaddle <- xpaddle - tmp_gk[1] 
+    ypaddle <- ypaddle - tmp_gk[2]
     
     # Keep paddle in window
     if (ypaddle < (psize / 2)) ypaddle <- (psize / 2)
