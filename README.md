@@ -3,4 +3,4 @@
 
 ### Final term
 --------------
-  - **pong** with R
+  - **'Pong'** with R
