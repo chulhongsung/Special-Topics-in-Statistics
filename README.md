@@ -2,7 +2,7 @@
 
 ### 1. Mid term-project
 
-- I don't know what I did. :D
+- **Skip :D**
 
 
 ### 2. Final term-project 
