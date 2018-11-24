@@ -1,11 +1,11 @@
 # Special topics in Statistics
 
-### Mid term-project
+### 1. Mid term-project
 
 - I don't know what I did. :D
 
 
-### Final term-project 
+### 2. Final term-project 
 
-### **'King Pong'**
+- **'King Pong'**
 
