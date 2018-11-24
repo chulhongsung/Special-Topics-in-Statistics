@@ -16,6 +16,8 @@
   
   - Revise **'pong.R'** for paddle moving by **'SGD', 'SPSA', ~'adaptive SPSA'~ and ~'FDSA'~** 
   
+  - Scoreboards
+  
 -------------------
 #### 1. 'SGD' method
 
