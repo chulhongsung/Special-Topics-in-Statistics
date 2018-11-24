@@ -10,5 +10,5 @@
 - **'King Pong'** 
 
 
-- [README.md](https://github.com/chulhongsung/Special-Topics-in-Statistics/tree/master/final-term)
+- [README.md](https://github.com/chulhongsung/Special-Topics-in-Statistics/tree/master/final-term/README.md)
 
