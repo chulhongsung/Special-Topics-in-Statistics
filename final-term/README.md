@@ -1,7 +1,6 @@
-# Special topics in Statistics
-
 
 ### Final term-project 
+
 
 ### **'King Pong'**
 
