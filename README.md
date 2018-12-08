@@ -2,7 +2,7 @@
 
 ### 1. Mid term-project
 
-- **Skip :D**
+- ~**Dimension reduction**~
 
 
 ### 2. Final term-project 
