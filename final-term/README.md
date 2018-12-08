@@ -13,7 +13,7 @@
   - **'pong.R'** source from ['r.prevos.net Rcade'](https://github.com/pprevos/r.prevos.net/tree/master/Rcade)
   
   
-  - Revise **'pong.R'** for paddle moving by **'SGD', 'SPSA', 'FDSA' and ~'adaptive SPSA'~** 
+  - Revise **'pong.R'** for paddle moving by **'SGD', 'SPSA', 'FDSA' and 'adaptive SPSA(2SPSA)'** 
   
   
   - Scoreboards
@@ -39,7 +39,7 @@
 ----------------------
 #### 4. 'adaptive SPSA(2SPSA)' method
 
-soon
+<img width = "400" heigth = "350" src = https://user-images.githubusercontent.com/37679460/49689724-9fbe0080-fb68-11e8-82cf-f29697ae52ea.gif>
 
 
 
