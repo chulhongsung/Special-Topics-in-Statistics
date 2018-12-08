@@ -16,7 +16,6 @@ lines(c(1, 30), c(-0.5, -0.5), type = "l", lwd = 3, col = "white")
 lines(c(1, 30), c(30.5, 30.5), type = "l", lwd = 3, col = "white")
 lines(c(30, 30), c(-0.5, 30.5), type = "l", lwd = 3, col = "white")
 
-
 # Playing field boundaries
 xmin <- 0.5
 xmax <- 29.4
@@ -37,14 +36,17 @@ xpaddle <- 0
 dx <- runif(1, .5, 1)
 dy <- runif(1, .5, 1)
 
-# Gradient
-gd <- function(x, y, xpaddle, ypaddle)
-{
-  d_x <- (-(x - xpaddle))/(sqrt((x - xpaddle)^2 + (y - ypaddle)^2))
-  d_y <- (-(y - ypaddle))/(sqrt((x - xpaddle)^2 + (y - ypaddle)^2))
-  return(c(d_x, d_y))
-}
-
+# Noisy loss(= distance between ball and paddle) measurement
+gf <- function(x, y, xpaddle, ypaddle)
+{ 
+  dk <- ifelse(rbinom(n = 2, size = 1, prob = 1/2) == 0, -1, 1)
+  
+  dif1 <- sqrt((x - (xpaddle + dk[1]))^2 + (y - ypaddle)^2) + runif(1, -0.5, 0.5) - sqrt((x - (xpaddle - dk[1]))^2 + (y - ypaddle)^2) + runif(1, -0.5, 0.5)
+  
+  dif2 <- sqrt((x - xpaddle)^2 + (y - (ypaddle + dk[2]))^2) + runif(1, -0.5, 0.5) - sqrt((x - xpaddle)^2 + (y - (ypaddle - dk[2]))^2) + runif(1, -0.5, 0.5)
+  
+  return(c(dif1/(2*dk[1]), dif2/(2*dk[2]))) 
+} 
 
 # Game play
 while (x > xpaddle - 1){
@@ -75,15 +77,14 @@ while (x > xpaddle - 1){
   # Erase back line
   lines(c(0, 0), c(1, 29), type = "l", lwd = 8, col = "black")
   
-  # Move paddle by SGD method
+  # Move paddle by SPSA method
   if ( (x <= 20) & (sign(dx) <= 0) ) # Condition paddle observe  ball
   { # Erase back line
     lines(c(xpaddle, xpaddle), c(0.2, 29.8), type = "l", lwd = 8, col = "black")
     
-    tmp_gd <- gd(x, y, xpaddle, ypaddle)
-    
-    xpaddle <- xpaddle - tmp_gd[1] 
-    ypaddle <- ypaddle - tmp_gd[2]
+    tmp_gf <- gf(x, y, xpaddle, ypaddle)
+    xpaddle <- xpaddle - tmp_gf[1] 
+    ypaddle <- ypaddle - tmp_gf[2]
     
     # Keep paddle in window
     if (ypaddle < (psize / 2)) ypaddle <- (psize / 2)
@@ -117,3 +118,4 @@ beep(8)
 text(15,15, "GAME OVER", cex=5, col = "white")
 s <- ifelse(score == 1, "", "s")
 text(15,5, paste0(score, " Point", s), cex=3, col = "white") 
+

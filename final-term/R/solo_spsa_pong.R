@@ -1,4 +1,3 @@
-
 # Sound library
 rm(list = ls())
 gc(reset = T)
@@ -15,6 +14,7 @@ plot.new()
 plot.window(xlim = c(0,30), ylim = c(0,30))
 lines(c(1, 30), c(-0.5, -0.5), type = "l", lwd = 3, col = "white")
 lines(c(1, 30), c(30.5, 30.5), type = "l", lwd = 3, col = "white")
+lines(c(30, 30), c(-0.5, 30.5), type = "l", lwd = 3, col = "white")
 
 # Playing field boundaries
 xmin <- 0.5
@@ -41,7 +41,7 @@ gk <- function(x, y, xpaddle, ypaddle)
 { 
   dk <- ifelse(rbinom(n = 2, size = 1, prob = 1/2) == 0, -1, 1)
   
-  dif <- sqrt((x - (xpaddle + dk[1]))^2 + (y - (ypaddle + dk[2]))^2) + runif(1, -2, 2) - sqrt((x - (xpaddle - dk[1]))^2 + (y - (ypaddle-dk[2]))^2) + runif(1, -0.5, 0.5)
+  dif <- sqrt((x - (xpaddle + dk[1]))^2 + (y - (ypaddle + dk[2]))^2) + runif(1, -0.5, 0.5) - sqrt((x - (xpaddle - dk[1]))^2 + (y - (ypaddle-dk[2]))^2) + runif(1, -0.5, 0.5)
   
   return(c(dif/(2*dk[1]), dif/(2*dk[2]))) 
 } 
