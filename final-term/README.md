@@ -39,6 +39,7 @@
 ----------------------
 #### 4. 'adaptive SPSA' method
 
+soon
 
 
 
