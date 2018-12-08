@@ -27,14 +27,14 @@
 <img width = "400" heigth = "350" src = https://user-images.githubusercontent.com/37679460/49686033-eb08ec80-fb31-11e8-982d-75267b886e03.gif>
 
 ----------------------
+#### 2. 'FDSA' method
 
-####  2. 'SPSA' method
+ <img width = "400" heigth = "350" src = https://user-images.githubusercontent.com/37679460/49686034-eb08ec80-fb31-11e8-8822-372993fe8a5d.gif>
+ 
+----------------------
+#### 3. 'SPSA' method
 
 <img width = "400" heigth = "350" src = https://user-images.githubusercontent.com/37679460/49686032-eb08ec80-fb31-11e8-988d-0a0a998b8f7c.gif>
 
-
 ----------------------
 
-#### 3. 'FDSA' method
-
- <img width = "400" heigth = "350" src = https://user-images.githubusercontent.com/37679460/49686034-eb08ec80-fb31-11e8-8822-372993fe8a5d.gif>
