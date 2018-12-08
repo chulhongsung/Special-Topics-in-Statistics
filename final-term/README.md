@@ -37,4 +37,8 @@
 <img width = "400" heigth = "350" src = https://user-images.githubusercontent.com/37679460/49686032-eb08ec80-fb31-11e8-988d-0a0a998b8f7c.gif>
 
 ----------------------
+#### 4. 'adaptive SPSA' method
+
+
+
 
