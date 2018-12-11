@@ -43,9 +43,9 @@
 
 
 ----------------------
-### SPSA VS FDSA
+#### 'SPSA' VS 'FDSA'
 
-- **green** : spsa, **blue** : fdsa
+- **green** : SPSA, **blue** : FDSA
 
 <img width = "800" heigth = "350" src = https://user-images.githubusercontent.com/37679460/49780717-1b7ba100-fd53-11e8-80e9-a13c44ae9115.gif>
 
