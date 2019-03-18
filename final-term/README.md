@@ -7,7 +7,7 @@
 <img width = "400" heigth = "350" src = https://user-images.githubusercontent.com/37679460/48955703-888ce980-ef92-11e8-9a3d-428c13ec2c1a.png>
 
 ----------------------
-  - **'Pong'** with R
+  - **'Pong'** with R :video_game:
   
   
   - **'pong.R'** source from ['r.prevos.net Rcade'](https://github.com/pprevos/r.prevos.net/tree/master/Rcade)
